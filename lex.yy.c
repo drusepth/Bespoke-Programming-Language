@@ -536,7 +536,7 @@ char *yytext;
 #line 1 "bespoke.l"
 /*    bespoke.l
  
- 	A lex specification file for Bespoke.
+      A lex specification file for Bespoke.
      
       To create the lexical analyzer:
 
@@ -547,29 +547,29 @@ char *yytext;
 #line 13 "bespoke.l"
 /* Definitions of constants, variables, & function prototypes go here */
 
-#define T_IDENT			1
-#define T_INTCONST	2
-#define T_UNKNOWN		3
+#define T_IDENT      1
+#define T_INTCONST   2
+#define T_UNKNOWN    3
 
-#define T_ADD				4
-#define T_SUB				5
-#define T_MULT			6
-#define T_DIV				7
+#define T_ADD        4
+#define T_SUB        5
+#define T_MULT       6
+#define T_DIV        7
 
-#define T_AND				8
-#define T_OR				9
-#define T_NOT				10
+#define T_AND        8
+#define T_OR         9
+#define T_NOT        10
 
-#define T_LT				11
-#define T_GT				12
-#define T_LE				13
-#define T_GE				14
-#define T_EQ				15
-#define T_NE				16
+#define T_LT         11
+#define T_GT         12
+#define T_LE         13
+#define T_GE         14
+#define T_EQ         15
+#define T_NE         16
 
-#define T_INPUT			17
-#define T_PRINT			18
-#define T_IF				19
+#define T_INPUT      17
+#define T_PRINT      18
+#define T_IF         19
 
 int numLines = 0;
 
@@ -853,153 +853,153 @@ case 1:
 YY_RULE_SETUP
 #line 59 "bespoke.l"
 {
-										printTokenInfo("PRINT", yytext);
-										return T_PRINT;
-									}
+                     printTokenInfo("PRINT", yytext);
+                     return T_PRINT;
+                   }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
 #line 64 "bespoke.l"
 {
-										printTokenInfo("input", yytext);
-										return T_INPUT;
-									}
+                     printTokenInfo("input", yytext);
+                     return T_INPUT;
+                   }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
 #line 69 "bespoke.l"
 {
-										printTokenInfo("IF", yytext);
-										return T_IF;
-									}
+                     printTokenInfo("IF", yytext);
+                     return T_IF;
+                   }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
 #line 74 "bespoke.l"
 {
-										printTokenInfo("ADD", yytext);
-										return T_ADD;
-									}
+                     printTokenInfo("ADD", yytext);
+                     return T_ADD;
+                   }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
 #line 79 "bespoke.l"
 {
-										printTokenInfo("SUB", yytext);
-										return T_SUB;
-									}
+                     printTokenInfo("SUB", yytext);
+                     return T_SUB;
+                   }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
 #line 84 "bespoke.l"
 {
-										printTokenInfo("MULT", yytext);
-										return T_MULT;
-									}
+                     printTokenInfo("MULT", yytext);
+                     return T_MULT;
+                   }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
 #line 89 "bespoke.l"
 {
-										printTokenInfo("DIV", yytext);
-										return T_DIV;
-									}
+                     printTokenInfo("DIV", yytext);
+                     return T_DIV;
+                   }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
 #line 94 "bespoke.l"
 {
-										printTokenInfo("GT", yytext);
-										return T_GT;
-									}
+                     printTokenInfo("GT", yytext);
+                     return T_GT;
+                   }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
 #line 99 "bespoke.l"
 {
-										printTokenInfo("GE", yytext);
-										return T_GE;
-									}
+                     printTokenInfo("GE", yytext);
+                     return T_GE;
+                   }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
 #line 104 "bespoke.l"
 {
-										printTokenInfo("LT", yytext);
-										return T_LT;
-									}
+                     printTokenInfo("LT", yytext);
+                     return T_LT;
+                   }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
 #line 109 "bespoke.l"
 {
-										printTokenInfo("LE", yytext);
-										return T_LE;
-									}
+                     printTokenInfo("LE", yytext);
+                     return T_LE;
+                   }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
 #line 114 "bespoke.l"
 {
-										printTokenInfo("EQ", yytext);
-										return T_EQ;
-									}
+                     printTokenInfo("EQ", yytext);
+                     return T_EQ;
+                   }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
 #line 119 "bespoke.l"
 {
-										printTokenInfo("NE", yytext);
-										return T_NE;
-									}
+                     printTokenInfo("NE", yytext);
+                     return T_NE;
+                   }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
 #line 124 "bespoke.l"
 {
-										printTokenInfo("AND", yytext);
-										return T_AND;
-									}
+                     printTokenInfo("AND", yytext);
+                     return T_AND;
+                   }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
 #line 129 "bespoke.l"
 {
-										printTokenInfo("OR", yytext);
-										return T_OR;
-									}
+                     printTokenInfo("OR", yytext);
+                     return T_OR;
+                   }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
 #line 134 "bespoke.l"
 {
-										printTokenInfo("NOT", yytext);
-										return T_NOT;
-									}
+                     printTokenInfo("NOT", yytext);
+                     return T_NOT;
+                   }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
 #line 139 "bespoke.l"
 {
-										printTokenInfo("INTCONST", yytext);
-										return T_INTCONST;
-									}
+                     printTokenInfo("INTCONST", yytext);
+                     return T_INTCONST;
+                   }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
 #line 144 "bespoke.l"
 {
-										printTokenInfo("IDENT", yytext);
-										return T_IDENT;
-									}
+                     printTokenInfo("IDENT", yytext);
+                     return T_IDENT;
+                   }
 	YY_BREAK
 case 19:
 /* rule 19 can match eol */
 YY_RULE_SETUP
 #line 149 "bespoke.l"
 {
-										numLines++;
-                  }
+                     numLines++;
+                   }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
@@ -1010,9 +1010,9 @@ case 21:
 YY_RULE_SETUP
 #line 155 "bespoke.l"
 {
-										printTokenInfo("UNKNOWN", yytext);
-										return T_UNKNOWN;
-									}
+                     printTokenInfo("UNKNOWN", yytext);
+                     return T_UNKNOWN;
+                   }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
@@ -2024,17 +2024,17 @@ void yyfree (void * ptr )
 // Function definitions
 
 void printTokenInfo(const char* tokenType, char* lexeme) {
-	printf("TOKEN: %s  LEXEME: %s\n", tokenType, lexeme);
+  printf("TOKEN: %s  LEXEME: %s\n", tokenType, lexeme);
 }
 
 // yywrap returning 1 means only 1 input file will be scanned.
 int yywrap(void) { return 1; }
 
 int main(void) {
-	while ( yylex() ) ;  // Keep processing tokens until 0 returned
+  while ( yylex() ) ;  // Keep processing tokens until 0 returned
 
-	printf("Processed %d lines\n", numLines);
-	return 0;
+  printf("Processed %d lines\n", numLines);
+  return 0;
 }
 
 
