@@ -10,35 +10,6 @@
 */
 
 %{
-/* Definitions of constants, variables, & function prototypes go here */
-
-#define T_IDENT      1
-#define T_INTCONST   2
-#define T_UNKNOWN    3
-
-#define T_ADD        4
-#define T_SUB        5
-#define T_MULT       6
-#define T_DIV        7
-
-#define T_AND        8
-#define T_OR         9
-#define T_NOT        10
-
-#define T_LT         11
-#define T_GT         12
-#define T_LE         13
-#define T_GE         14
-#define T_EQ         15
-#define T_NE         16
-
-#define T_INPUT      17
-#define T_PRINT      18
-#define T_IF         19
-
-int numLines = 0;
-
-void printTokenInfo(const char* tokenType, char* lexeme);
 
 %}
 
@@ -158,20 +129,4 @@ IDENT              ({LETTER}|_)({LETTER}|{DIGIT}|_)*
                    }
 
 %%
-
-// Function definitions
-
-void printTokenInfo(const char* tokenType, char* lexeme) {
-  printf("TOKEN: %s  LEXEME: %s\n", tokenType, lexeme);
-}
-
-// yywrap returning 1 means only 1 input file will be scanned.
-int yywrap(void) { return 1; }
-
-int main(void) {
-  while ( yylex() ) ;  // Keep processing tokens until 0 returned
-
-  printf("Processed %d lines\n", numLines);
-  return 0;
-}
 
