@@ -1,0 +1,7 @@
+set the number largest equal to zero
+for all values of the number x between 100 and 999
+  for all values of the number y between 100 and 999
+    set the number result equal to x times y
+    if the number result as a string reversed is equal to the number result as a string and the number result is greater than the number largest then
+      set the number largest equal to the number result
+afterwards, print the number largest
